@@ -66,7 +66,9 @@ function makeShoeToLi (shoe) {
                     content: newReview
                 })
             }).then(r => r.json()).then((createdReview) => {
-                // shoe.reviews = shoe.reviews.push(createdReview)
+                // show.reviews = showhoe.reviews.push(createdReview)
+                // let newShoeReview = shoe.reviews.push(createdReview)
+                // shoe = newShowReview
                 let newShoeReviewLi = document.createElement("li")
                 newShoeReviewLi.innerText = createdReview.content
                 reviewUl.append(newShoeReviewLi)
@@ -80,7 +82,6 @@ function makeShoeToLi (shoe) {
 // click on shoe to put in main
 
 // main shoe container
-
 fetch(`http://localhost:3000/shoes/1`).then(r => r.json())
 .then((firstShoe) => {
     mainShoe.innerHTML =
@@ -129,6 +130,8 @@ fetch(`http://localhost:3000/shoes/1`).then(r => r.json())
             })
         }).then(r => r.json()).then((createdReview) => {
             // firstShoe.reviews = firstShoe.reviews.push(createdReview)
+            // let newShoeReview = firstShoe.reviews.push(createdReview)
+            // firstShoe = newShoeReview
             let newShoeReviewLi = document.createElement("li")
             newShoeReviewLi.innerText = createdReview.content
             reviewUl.append(newShoeReviewLi)
@@ -137,5 +140,4 @@ fetch(`http://localhost:3000/shoes/1`).then(r => r.json())
     // main shoe form logic
 
 })
-
 {/* main shoe container */}
